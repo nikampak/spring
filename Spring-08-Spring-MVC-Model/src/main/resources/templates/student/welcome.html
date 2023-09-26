@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,5 +8,11 @@
 <body>
     <h2 th:text="${name}"></h2>
     <h2 th:text="${course}"></h2>
+    <h2 th:text="${subject}"></h2>
+    <h2 th:text="${id}"></h2>
+    <h2 th:text="${numbs}"></h2>
+    <h2 th:text="${numbs.get(0)}"></h2>
+    <h2 th:text="${student.firstname}"></h2>
+    <h2 th:text="${student.lastName}"></h2>
 </body>
 </html>
