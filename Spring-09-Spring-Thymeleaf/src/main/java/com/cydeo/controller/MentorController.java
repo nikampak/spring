@@ -17,7 +17,7 @@ public class MentorController {
     @GetMapping("/register")
     public String showForm(Model model){
         model.addAttribute("mentor", new Mentor() );
-        List<String> batchList = Arrays.asList("JD1", "JD2", "EU1", "EU2");
+        List<String> batchList = Arrays.asList("JD1", "JD2", "EU1", "EU2", "B20", "B21");
         model.addAttribute("batchList", batchList);
         return "mentor/mentor-register";
     }
@@ -28,6 +28,7 @@ public class MentorController {
 //        System.out.println(mentor.toString() );
 //        return "mentor/mentor-confirmation";
 
-        return "redirect:/mentor/mentor-register";
+
+        return "redirect:/mentor/mentor-confirmation";
     }
 }

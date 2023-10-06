@@ -18,13 +18,13 @@
         <label>Graduated:</label>
         <input th:type="checkbox" th:field="*{graduated}"><br>
         <label>Gender:</label>
-        <input th:type="radio" id="Male" th:field="*{gender}">Male
-        <input th:type="radio" id="Female" th:field="*{gender}">Female<br>
-        <label>Batach Number</label>
+        <input th:type="radio" value="Male" th:field="*{gender}">Male
+        <input th:type="radio" value="Female" th:field="*{gender}">Female<br>
+        <label>Batch Number:</label>
         <select th:field="*{batch}">
             <option th:each="theBatch : ${batchList}" th:value="${theBatch}" th:text="${theBatch}"></option>
         </select>
-
+        <br>
         <label>Company:</label>
         <textarea th:field="*{company}"></textarea><br>
 
