@@ -1,3 +1,5 @@
+-- not in use
+-- to use it rename to schema.sql
 drop table if exists EMPLOYEES;
 
 create table EMPLOYEES(

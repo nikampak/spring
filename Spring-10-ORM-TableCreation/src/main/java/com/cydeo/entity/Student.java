@@ -1,13 +1,34 @@
-//package com.cydeo.entity;
-//
-//import javax.persistence.Entity;
-//import javax.persistence.Id;
-//@Entity
-//public class Student {
-//    @Id
-//    private long id;
-//    private String firstName;  //in SQL - first_name
-//    private String lastName;
-//    private String email;
-//
-//}
+package com.cydeo.entity;
+
+import com.cydeo.enums.Gender;
+
+import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+@Entity
+@Table(name="students")
+public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    @Column(name="studentFirstName")
+    private String firstName;  //in SQL - first_name
+    @Column(name="studentLastName")
+    private String lastName;
+    private String email;
+
+    @Transient
+    private String city;
+
+    @Column(columnDefinition =  "DATE")
+    private LocalDate birthdate;
+    @Column(columnDefinition =  "TIME")
+    private LocalTime birthtime;
+    @Column(columnDefinition =  "TIMESTAMP")
+    private LocalDate birthdateDateTime;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+
+}
