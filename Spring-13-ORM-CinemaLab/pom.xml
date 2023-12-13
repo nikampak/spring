@@ -14,7 +14,7 @@
 	<name>Spring-13-ORM-CinemaLab</name>
 	<description>Spring-13-ORM-CinemaLab</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
